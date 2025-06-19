@@ -68,55 +68,47 @@ endfunction
 " Highlight the symbol and its references when holding the cursor
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-" Symbol renaming
-let g:which_key_leader_map.r.n = "rename"
-nmap <leader>rn <Plug>(coc-rename)
-
-" Formatting selected code
-let g:which_key_leader_map.f = {'name': 'format/fix'}
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-
 augroup mygroup
   autocmd!
   " Setup formatexpr specified filetype(s)
   autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
 augroup end
 
+" Formatting selected code
+let g:which_key_leader_map.f = {'name': '<leader>f fix/format'}
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+" Apply the most preferred quickfix action to fix diagnostic on the current line
+let g:which_key_leader_map.F = "<leader>cF fix the current line"
+nmap <leader>F  <Plug>(coc-fix-current)
+
 " Applying code actions to the selected code block
 " Example: `<leader>aap` for current paragraph
-let g:which_key_leader_map.a = {'name': 'coc action'}
+let g:which_key_leader_map.a = {'name': '<leader>a coc action'}
 xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
 " Remap keys for applying code actions at the cursor position
-let g:which_key_leader_map.a.c = "apply action"
+let g:which_key_leader_map.a.c = "<leader>ca action at cursor"
 nmap <leader>ac  <Plug>(coc-codeaction-cursor)
 " Remap keys for apply code actions affect whole buffer
-let g:which_key_leader_map.a.s = "apply to whole buffer"
+let g:which_key_leader_map.a.s = "<leader>cas source action"
 nmap <leader>as  <Plug>(coc-codeaction-source)
 " Run the Code Lens action on the current line
-let g:which_key_leader_map.a.l = "apply code lens action"
+let g:which_key_leader_map.a.l = "<leader>cl codelens action"
 nmap <leader>al  <Plug>(coc-codelens-action)
 
-" Apply the most preferred quickfix action to fix diagnostic on the current line
-let g:which_key_leader_map.f.c = "fix the current line"
-nmap <leader>fc  <Plug>(coc-fix-current)
-
 " Remap keys for applying refactor code actions
-let g:which_key_leader_map.r.e = "refactor"
+let g:which_key_leader_map.r = {"name": "<leader>r refactor"}
+let g:which_key_leader_map.r.e = "<leader>re refactor"
 nmap <silent> <leader>re <Plug>(coc-codeaction-refactor)
-xmap <silent> <leader>r  <Plug>(coc-codeaction-refactor-selected)
+xmap <silent> <leader>re  <Plug>(coc-codeaction-refactor-selected)
+" Symbol renaming
+let g:which_key_leader_map.r.n = "<leader>cr rename"
+nmap <leader>rn <Plug>(coc-rename)
 
-" Map function and class text objects
-" NOTE: Requires 'textDocument.documentSymbol' support from the language server
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-xmap ic <Plug>(coc-classobj-i)
-omap ic <Plug>(coc-classobj-i)
-xmap ac <Plug>(coc-classobj-a)
-omap ac <Plug>(coc-classobj-a)
+" Use CTRL-S for selections ranges
+" Requires 'textDocument/selectionRange' support of language server
+nmap <silent> <C-s> <Plug>(coc-range-select)
+xmap <silent> <C-s> <Plug>(coc-range-select)
 
 " Remap <C-f> and <C-b> to scroll float windows/popups
 if has('nvim-0.4.0') || has('patch-8.2.0750')
@@ -127,11 +119,6 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
   vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
   vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 endif
-
-" Use CTRL-S for selections ranges
-" Requires 'textDocument/selectionRange' support of language server
-nmap <silent> <C-s> <Plug>(coc-range-select)
-xmap <silent> <C-s> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer
 command! -nargs=0 Format :call CocActionAsync('format')

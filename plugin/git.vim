@@ -1,15 +1,14 @@
 " Keybindings
 let g:which_key_leader_map.g={'name': '<leader>g git (fugitive)'}
-let g:which_key_leader_map.g.a={'name': '<leader>ga git add'}
-let g:which_key_leader_map.g.a.a='<leader>gA git add all'
-nmap <leader>gA :G add .<CR>
-let g:which_key_leader_map.g.a.f='<leader>ga git add specified file'
+let g:which_key_leader_map.g.a='<leader>ga git add'
 nmap <leader>ga :G add<SPACE>
+let g:which_key_leader_map.g.A='<leader>gA git add all'
+nmap <leader>gA :G add .<CR>
 let g:which_key_leader_map.g.c='<leader>gc git commit with message'
 nmap <leader>gc :G commit -m<SPACE>
 let g:which_key_leader_map.g.p='<leader>gp pull'
 nmap <leader>gp :G pull<SPACE>
-let g:which_key_leader_map.g.P='<leader>gps push'
+let g:which_key_leader_map.g.P='<leader>gP push'
 nmap <leader>gP :G push<SPACE>
 let g:which_key_leader_map.g.s='<leader>gs git status'
 nmap <leader>gs :G status<CR>
@@ -34,4 +33,5 @@ nmap <leader>grh :G reset<SPACE>
 let g:which_key_leader_map.g.f='<leader>lf git fetch'
 nmap <leader>gf :G fetch<CR>
 
-
+let g:which_key_leader_map.g.g = '<leader>gg lazygit'
+nmap <leader>gg :FloatermNew lazygit<CR>
