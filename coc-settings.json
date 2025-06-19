@@ -1,0 +1,23 @@
+{
+    "workspace.rootPatterns": [
+        ".git",
+        ".hg",
+        ".projections.json",
+        ".catkin_workspace",
+        "build",
+        "devel"
+    ],
+    "clangd.compilationDatabaseCandidates": ["${workspaceFolder}/", "${workspaceFolder}/build/", "${workspaceFolder}/build/Debug/", "${workspaceFolder}/build/Release/"],
+    "clangd.arguments": [
+        "--background-index",
+        "--clang-tidy",
+        "--completion-style=detailed",
+        "--inlay-hints=true"
+
+    ],
+    "inlayHint.enable": true,
+    "inlayHint.display": true,
+    "inlayHint.enableParameter": true,
+    "inlayHint.refreshOnInsertMode": true
+}
+
