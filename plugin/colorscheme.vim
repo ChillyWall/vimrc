@@ -13,9 +13,13 @@ let g:airline#extensions#gutentags#enabled = 1
 " - airline-tagbar
 let g:airline#extensions#tagbar#enabled = 1
 
+set termguicolors
+
 "color scheme
 let g:material_terminal_italics = 1
 let g:material_theme_style = 'palenight'
 colorscheme material
-set termguicolors
 
+" tokyonight
+set rtp+=~/.vim/bundle/tokyonight.nvim/extras/vim
+colorscheme tokyonight

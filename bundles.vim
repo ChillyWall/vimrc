@@ -71,5 +71,6 @@ Plugin 'bfrg/vim-c-cpp-modern'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kaicataldo/material.vim'
+Plugin 'folke/tokyonight.nvim.git'
 
 filetype plugin indent on     " required!
