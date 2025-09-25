@@ -140,7 +140,7 @@ nmap <leader>ws :split<CR>
 let g:which_key_leader_map.w.o='<leader>wo close all other windows'
 nmap <leader>wo <c-w>o
 let g:which_key_leader_map.w.d='<leader>wd delete the current window'
-nmap <leader>wd <c-w>d
+nmap <leader>wd <c-w>c
 "      ==== jump windows ====
 let g:which_key_leader_map.w.h='<leader>wh change to the left window'
 nmap <leader>wh <c-w>h

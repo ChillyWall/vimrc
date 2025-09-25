@@ -1,76 +1,75 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required!
-Plugin 'gmarik/vundle'
+call plug#begin()
 
 "------------------
 " Code Completions
 "------------------
-Plugin 'Raimondi/delimitMate'
-Plugin 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+Plug 'Raimondi/delimitMate'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "-----------------
 " Fast navigation
 "-----------------
-Plugin 'Lokaltog/vim-easymotion'
+Plug 'easymotion/vim-easymotion'
 
 "--------------
 " Fast editing
 "--------------
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'liuchengxu/vim-which-key'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdcommenter'
+Plug 'liuchengxu/vim-which-key'
 
 "--------------
 " IDE features
 "--------------
 " -- NerdTree
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " -- git
-Plugin 'tpope/vim-fugitive'
-Plugin 'voldikss/vim-floaterm'
+Plug 'tpope/vim-fugitive'
+Plug 'voldikss/vim-floaterm'
 " -- editor
-Plugin 'luochen1990/rainbow'
-Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'wfxr/minimap.vim'
-Plugin 'yggdroot/indentline'
+Plug 'luochen1990/rainbow'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'wfxr/minimap.vim'
+Plug 'yggdroot/indentline'
 " -- search
-Plugin 'Yggdroot/LeaderF', {'do': ':LeaderfInstallCExtension'}
+Plug 'Yggdroot/LeaderF', {'do': ':LeaderfInstallCExtension'}
 
 "-------------
 " Other Utils
 "-------------
 
 "------- markup language -------
-Plugin 'tpope/vim-markdown'
+Plug 'tpope/vim-markdown'
 " -- markdown preview
-Plugin 'iamcco/mathjax-support-for-mkdp'
-Plugin 'iamcco/markdown-preview.vim'
+Plug 'iamcco/mathjax-support-for-mkdp'
+Plug 'iamcco/markdown-preview.vim'
 
 "------- C++ ------------
-Plugin 'cdelledonne/vim-cmake'
+Plug 'cdelledonne/vim-cmake'
 " -- gtags
-Plugin 'ludovicchabant/vim-gutentags'
-Plugin 'skywind3000/gutentags_plus'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'skywind3000/gutentags_plus'
 " -- syntax
-Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'bfrg/vim-c-cpp-modern'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'bfrg/vim-c-cpp-modern'
 
 "--------------
 " Color Schemes
 "--------------
 " -- airline
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'kaicataldo/material.vim'
-Plugin 'folke/tokyonight.nvim.git'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+Plug 'folke/tokyonight.nvim'
+
+Plug 'lervag/vimtex'
+
+call plug#end()
 
 filetype plugin indent on     " required!

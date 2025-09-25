@@ -21,5 +21,5 @@ let g:material_theme_style = 'palenight'
 colorscheme material
 
 " tokyonight
-set rtp+=~/.vim/bundle/tokyonight.nvim/extras/vim
+set rtp+=~/.vim/plugged/tokyonight.nvim/extras/vim
 colorscheme tokyonight
