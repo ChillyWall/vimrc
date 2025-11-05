@@ -75,11 +75,10 @@ augroup mygroup
 augroup end
 
 " Formatting selected code
-let g:which_key_leader_map.f = {'name': '<leader>f fix/format'}
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+let g:which_key_leader_map.f = {'name': '<leader>f format'}
+nmap <leader>f  :Format<CR>
 " Apply the most preferred quickfix action to fix diagnostic on the current line
-let g:which_key_leader_map.F = "<leader>cF fix the current line"
+let g:which_key_leader_map.F = "<leader>F fix the current line"
 nmap <leader>F  <Plug>(coc-fix-current)
 
 " Applying code actions to the selected code block

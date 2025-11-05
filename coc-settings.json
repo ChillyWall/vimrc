@@ -5,19 +5,24 @@
         ".projections.json",
         ".catkin_workspace",
         "build",
-        "devel"
+        "devel",
+        "compile_commands.json"
     ],
-    "clangd.compilationDatabaseCandidates": ["${workspaceFolder}/", "${workspaceFolder}/build/", "${workspaceFolder}/build/Debug/", "${workspaceFolder}/build/Release/"],
-    "clangd.arguments": [
-        "--background-index",
-        "--clang-tidy",
-        "--completion-style=detailed",
-        "--inlay-hints=true"
-
-    ],
+    "clangd": {
+        "path": "clangd-20",
+        "compilationDatabaseCandidates": ["${workspaceFolder}/", "${workspaceFolder}/build/", "${workspaceFolder}/build/Debug/", "${workspaceFolder}/build/Release/"],
+        "arguments": [
+            "--background-index",
+            "--clang-tidy",
+            "--completion-style=detailed",
+            "--inlay-hints=true"
+        ],
+    },
+    "cmake": {
+        "formatter": "/home/chilly/.local/bin/cmake-format"
+    },
     "inlayHint.enable": true,
     "inlayHint.display": true,
     "inlayHint.enableParameter": true,
     "inlayHint.refreshOnInsertMode": true
 }
-

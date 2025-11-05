@@ -50,14 +50,16 @@ Plug 'tpope/vim-markdown'
 Plug 'iamcco/mathjax-support-for-mkdp'
 Plug 'iamcco/markdown-preview.vim'
 
-"------- C++ ------------
-Plug 'cdelledonne/vim-cmake'
-" -- gtags
+"------- gtags --------
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'skywind3000/gutentags_plus'
+
+"------- C++ ------------
 " -- syntax
-Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'bfrg/vim-c-cpp-modern'
+" --cmake
+Plug 'pboettch/vim-cmake-syntax'
+Plug 'cdelledonne/vim-cmake'
 
 "--------------
 " Color Schemes
