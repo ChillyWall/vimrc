@@ -24,13 +24,9 @@ Plug 'liuchengxu/vim-which-key'
 "--------------
 " IDE features
 "--------------
-" -- NerdTree
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " -- git
 Plug 'tpope/vim-fugitive'
+" -- floaterm
 Plug 'voldikss/vim-floaterm'
 " -- editor
 Plug 'luochen1990/rainbow'
@@ -39,7 +35,11 @@ Plug 'wfxr/minimap.vim'
 Plug 'yggdroot/indentline'
 " -- search
 Plug 'Yggdroot/LeaderF', {'do': ':LeaderfInstallCExtension'}
-
+" -- Fern
+Plug 'lambdalisue/vim-fern'
+Plug 'lambdalisue/vim-fern-git-status'
+Plug 'lambdalisue/vim-nerdfont'
+Plug 'lambdalisue/vim-fern-renderer-nerdfont'
 "-------------
 " Other Utils
 "-------------
