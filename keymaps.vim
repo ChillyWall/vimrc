@@ -23,12 +23,6 @@ nmap <C-l> <C-w><C-l>
 nmap <C-j> <C-w><C-j>
 nmap <C-k> <C-w><C-k>
 
-" windows moving
-nmap <C-S-h> <C-w>H
-nmap <C-S-l> <C-w>L
-nmap <C-S-j> <C-w>J
-nmap <C-S-k> <C-w>K
-
 " escape terminal
 tmap <C-[> <C-\><C-n>
 

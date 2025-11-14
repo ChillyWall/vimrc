@@ -1,3 +1,3 @@
-source ~/.vim/bundles.vim
-source ~/.vim/options.vim
-source ~/.vim/keymaps.vim
+source ~/vimfiles/bundles.vim
+source ~/vimfiles/options.vim
+source ~/vimfiles/keymaps.vim
