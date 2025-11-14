@@ -16,7 +16,7 @@
             "--clang-tidy",
             "--completion-style=detailed",
             "--inlay-hints=true"
-        ],
+        ]
     },
     "cmake": {
         "formatter": "/home/chilly/.local/bin/cmake-format"
@@ -24,5 +24,6 @@
     "inlayHint.enable": true,
     "inlayHint.display": true,
     "inlayHint.enableParameter": true,
-    "inlayHint.refreshOnInsertMode": true
+    "inlayHint.refreshOnInsertMode": true,
+    "snippets.ultisnips.pythonPrompt": false
 }
