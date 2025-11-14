@@ -7,8 +7,9 @@ let g:fern#renderer = "nerdfont"
 function! s:init_fern() abort
   " Use 'select' instead of 'edit' for default 'open' action
   nmap <buffer> <Plug>(fern-action-open) <Plug>(fern-action-open:select)
-  nmap o <Plug>(fern-action-open:split)
-  nmap v <Plug>(fern-action-open:vsplit)
+  nmap <buffer> o <Plug>(fern-action-open:split)
+  nmap <buffer> v <Plug>(fern-action-open:vsplit)
+  unmap <buffer> <C-l>
 endfunction
 
 augroup fern-custom
