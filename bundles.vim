@@ -7,7 +7,9 @@ call plug#begin()
 " Code Completions
 "------------------
 Plug 'Raimondi/delimitMate'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 "-----------------
 " Fast navigation
