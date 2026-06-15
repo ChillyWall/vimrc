@@ -1,8 +1,6 @@
 " ======= Keybindings for plugin toggle =======
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
-nmap <F7> :MinimapToggle<CR>
-nmap <F8> :TagbarToggle<CR>
 
 " ===== some shortcuts =======
 " add a blank line
