@@ -6,16 +6,14 @@ nmap <F8> :TagbarToggle<CR>
 
 " ===== some shortcuts =======
 " add a blank line
-nmap <CR> o<Esc>
+nmap ]<SPACE> o<Esc>k
+nmap [<SPACE> O<Esc>j
 " quit the insert mode
 imap jj <Esc>
 
-" add a space
-nmap <SPACE> i<SPACE><Esc>l
-
 " switch buffer
-nmap H :bp<CR>
-nmap L :bn<CR>
+nmap [b :bp<CR>
+nmap ]b :bn<CR>
 
 " windows jumping
 nmap <C-h> <C-w><C-h>

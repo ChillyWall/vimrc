@@ -1,5 +1,5 @@
 " keymap
-let g:which_key_leader_map.E={'name': '<leader>E open Fern'}
+let g:which_key_leader_map.e={'name': '<leader>E open Fern'}
 nmap <leader>e :Fern . -drawer -keep -toggle<cr>
 
 let g:fern#renderer = "nerdfont"
@@ -15,4 +15,5 @@ endfunction
 augroup fern-custom
   autocmd! *
   autocmd FileType fern call s:init_fern()
+  autocmd FileType fern setlocal bufhidden=wipe
 augroup END
